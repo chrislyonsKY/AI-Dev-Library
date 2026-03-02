@@ -1,59 +1,42 @@
-# AI Dev Library — Reusable Project Infrastructure
+# Agents — Reusable AI Agent Configurations
 
-![Agents](https://img.shields.io/badge/Agents-12-blue?style=flat-square&logo=robot&logoColor=white)
-![Skills](https://img.shields.io/badge/Skills-8-green?style=flat-square&logo=bookopen&logoColor=white)
-![Guardrails](https://img.shields.io/badge/Guardrails-6-red?style=flat-square&logo=shield&logoColor=white)
-![Specs](https://img.shields.io/badge/Specs-5-orange?style=flat-square&logo=clipboard&logoColor=white)
-![Decisions](https://img.shields.io/badge/Decisions-3-purple?style=flat-square&logo=gitbranch&logoColor=white)
-![Prompts](https://img.shields.io/badge/Prompts-6-teal?style=flat-square&logo=terminal&logoColor=white)
+> Each agent is a specialized persona for a specific development task.
+> Fork into your project's `ai-dev/agents/` and customize with project context.
 
-![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
-![Platform](https://img.shields.io/badge/Platform-Claude_Code_%7C_Claude_Chat_%7C_ChatGPT_%7C_Copilot_%7C_Cursor-lightgrey?style=flat-square)
-![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen?style=flat-square)
-![Files](https://img.shields.io/badge/Files-47-informational?style=flat-square)
+## Inventory
 
-> A curated library of agents, skills, guardrails, specs, decisions, and prompt templates
-> designed to be forked into any new project's `ai-dev/` directory.
-
-**Philosophy:** Documentation and architecture first, code second. AI is the accelerant — you're the engine.
-
-## How to Use This Library
-
-1. **Starting a new project?** Copy the relevant files into your project's `ai-dev/` folder
-2. **Customize** — Replace `[PLACEHOLDERS]` with project-specific values
-3. **Reference from CLAUDE.md** — Wire up the files so AI tools discover them automatically
-
-## Library Contents
-
-### `agents/` — 12 Reusable Agent Configurations
-### `skills/` — 8 Domain Knowledge & Pattern Libraries
-### `guardrails/` — 6 Non-Negotiable Constraint Sets
-### `specs/` — 5 Specification Templates
-### `decisions/` — 3 Decision Record Templates
-### `prompt-templates/` — 6 Reusable AI Prompts
-
-See each directory's README.md for inventory and usage guidance.
-
-## Agent Combination Matrix
-
-| Phase | Primary Agent | Supporting Agents |
+| Agent | File | Primary Use |
 |---|---|---|
-| **Architecture** | Architect | Data Expert, GIS Expert |
-| **Implementation** | Language Expert (Py/C#/TS) | Data Expert, GIS Expert |
-| **Testing** | QA Reviewer | Language Expert |
-| **Code Review** | QA Reviewer + Architect | Security Reviewer |
-| **Refactoring** | Refactor Coach | Architect, Language Expert |
-| **Deployment** | DevOps Expert | Technical Writer |
-| **Documentation** | Technical Writer | All (for review) |
+| Solutions Architect | `architect.md` | System design, module interfaces, structural review |
+| Python Expert | `python-expert.md` | Business logic, ArcPy, data pipelines, idiomatic Python |
+| C# / .NET Expert | `csharp-expert.md` | ArcGIS Pro SDK, WPF/MVVM, .NET patterns |
+| TypeScript Expert | `typescript-expert.md` | React/Next.js, Three.js, Vite, web apps |
+| Data & Database Expert | `data-expert.md` | SQL, ETL, geodatabases, data modeling |
+| QA Reviewer | `qa-reviewer.md` | Testing, edge cases, code review findings |
+| DevOps Expert | `devops-expert.md` | Deployment, CI/CD, logging, scheduling |
+| Technical Writer | `technical-writer.md` | Docs, SOPs, README, runbooks, metadata |
+| Frontend & UI Expert | `frontend-expert.md` | React UI, CSS, accessibility, data viz |
+| Security Reviewer | `security-reviewer.md` | Threat modeling, credential audits, input validation |
+| GIS Domain Expert | `gis-expert.md` | Enterprise GIS, spatial analysis, geodatabase design |
+| Refactor Coach | `refactor-coach.md` | Legacy modernization, code smells, migration strategy |
 
-## Forking Workflow
+## Usage
 
-```bash
-# 1. Copy what you need into your project
-cp ai-dev-library/agents/architect.md my-project/ai-dev/agents/
-cp ai-dev-library/guardrails/*.md my-project/ai-dev/guardrails/
-
-# 2. Customize the [PLACEHOLDERS] with project-specific values
-
-# 3. Wire into CLAUDE.md — reference files so AI tools find them
+Reference from CLAUDE.md:
 ```
+Read ai-dev/agents/architect.md for your role definition.
+```
+
+Or in a Claude Code / chat prompt:
+```
+Read ai-dev/agents/python-expert.md, then implement the data sync module.
+```
+
+## Customization Checklist
+
+When forking an agent into a project:
+- [ ] Replace `[PROJECT_NAME]` with actual project name
+- [ ] Add project-specific patterns to the Patterns section
+- [ ] Add project-specific anti-patterns
+- [ ] Update the review checklist with project conventions
+- [ ] Cross-reference with `ai-dev/guardrails/` in the preamble
